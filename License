@@ -1,0 +1,23 @@
+
+#### d. **vendor/**
+
+Bu klasör, Composer tarafından yönetilen bir klasördür. Kütüphaneniz Composer ile yüklendiğinde, tüm bağımlılıklar ve autoload dosyaları burada saklanır.
+
+---
+
+### 3. **Kütüphanenin Kullanımı**
+
+Kütüphanenizi Composer ile yükleyip kullanmaya başlamak için şu adımları takip edebilirsiniz:
+
+1. **Kütüphaneyi Yüklemek İçin**:
+
+```bash
+composer install
+
+
+require 'vendor/autoload.php';
+
+use Security\WebAppFirewall;
+
+$firewall = new WebAppFirewall(true);
+$firewall->initializeProtection();
